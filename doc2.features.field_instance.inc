@@ -20,6 +20,7 @@ function doc2_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -74,7 +75,9 @@ function doc2_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 4,
       ),
@@ -92,19 +95,16 @@ function doc2_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'test_format' => 'test_format',
           1 => 1,
           2 => 2,
           3 => 3,
           4 => 4,
+          'test_format' => 'test_format',
         ),
         'allowed_formats_toggle' => 0,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
-            'test_format' => array(
-              'weight' => -7,
-            ),
             1 => array(
               'weight' => -9,
             ),
@@ -116,6 +116,9 @@ function doc2_field_default_field_instances() {
             ),
             4 => array(
               'weight' => -6,
+            ),
+            'test_format' => array(
+              'weight' => -7,
             ),
           ),
         ),
@@ -144,7 +147,9 @@ function doc2_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),
@@ -180,7 +185,9 @@ function doc2_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'file',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'file_default',
         'weight' => 0,
       ),
@@ -223,7 +230,9 @@ function doc2_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 5,
       ),
@@ -302,7 +311,9 @@ function doc2_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 6,
       ),
@@ -329,9 +340,92 @@ function doc2_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-priv_documentation-taxonomy_vocabulary_11'
+  $field_instances['node-priv_documentation-taxonomy_vocabulary_11'] = array(
+    'bundle' => 'priv_documentation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'taxonomy_vocabulary_11',
+    'label' => 'Departments',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-priv_documentation-taxonomy_vocabulary_17'
+  $field_instances['node-priv_documentation-taxonomy_vocabulary_17'] = array(
+    'bundle' => 'priv_documentation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Added on documentation on 09/03/2014',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'taxonomy_vocabulary_17',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 11,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('<strong>Is this document internal only?</strong>');
+  t('Added on documentation on 09/03/2014');
+  t('Departments');
   t('Description');
   t('File');
   t('Information about the Documentation.  Can use text from beginning of the document');
@@ -339,6 +433,7 @@ function doc2_field_default_field_instances() {
   t('Last Updated');
   t('Myecw folder');
   t('Sub-folders for eBO for use on Documentation and Videos');
+  t('Tags');
   t('The date the file or document was last updated');
   t('The folder that the document is in on my.eclinicalworks.com (myecw)');
   t('These files are private');

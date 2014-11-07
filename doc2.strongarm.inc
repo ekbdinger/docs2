@@ -96,7 +96,7 @@ function doc2_strongarm() {
           'weight' => '0',
         ),
         'badges' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
@@ -124,7 +124,9 @@ function doc2_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_priv_documentation';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'status',
+  );
   $export['node_options_priv_documentation'] = $strongarm;
 
   $strongarm = new stdClass();
